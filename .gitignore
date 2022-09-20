@@ -1,0 +1,10 @@
+/newLesson/target/
+/newLesson/.idea/modules.xml
+/newLesson/.idea/workspace.xml
+/newLesson/.idea/jarRepositories.xml
+/newLesson/.idea/compiler.xml
+/newLesson/.idea/libraries/
+/newLesson/.idea/sonarlint/issuestore
+/newLesson/*.iws
+/newLesson/*.iml
+/newLesson/*.ipr
