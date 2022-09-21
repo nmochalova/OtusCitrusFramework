@@ -1,4 +1,4 @@
-package tests;
+package lesson.tests;
 
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.context.TestContext;
@@ -7,9 +7,9 @@ import com.consol.citrus.testng.TestNGCitrusSupport;
 import org.springframework.http.HttpStatus;
 import org.testng.annotations.Test;
 
-import pojo.DataJson;
-import pojo.Support;
-import pojo.User;
+import lesson.pojo.DataJson;
+import lesson.pojo.Support;
+import lesson.pojo.User;
 
 import static com.consol.citrus.actions.EchoAction.Builder.echo;
 import static com.consol.citrus.http.actions.HttpActionBuilder.http;

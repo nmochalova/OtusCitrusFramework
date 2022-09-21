@@ -1,13 +1,12 @@
-package tests;
+package lesson.tests;
 
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.context.TestContext;
 import com.consol.citrus.message.builder.ObjectMappingPayloadBuilder;
 import com.consol.citrus.testng.TestNGCitrusSupport;
+import lesson.pojo.CreateUserResponse;
 import org.springframework.http.HttpStatus;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pojo.CreateUserResponse;
 
 import static com.consol.citrus.actions.EchoAction.Builder.echo;
 import static com.consol.citrus.dsl.JsonPathSupport.jsonPath;
@@ -15,28 +14,14 @@ import static com.consol.citrus.dsl.JsonSupport.json;
 import static com.consol.citrus.dsl.MessageSupport.MessageBodySupport.fromBody;
 import static com.consol.citrus.http.actions.HttpActionBuilder.http;
 
-public class FirstDataProviderCreateUserTest extends TestNGCitrusSupport {
+public class FirstTestCreateUser extends TestNGCitrusSupport {
     public TestContext context;
+    String name = "Nick";
+    String job = "Teacher";
 
-    @DataProvider(name = "dataProvider")
-    public Object[][] cardTypeProvider() {
-        return new Object[][]{
-                new Object[]{"George", "Driver"},
-                new Object[]{"Nick", "Teacher"},
-                new Object[]{"Anna", "Tester"},
-                new Object[]{"Mike", "Actor"},
-                new Object[]{"Liana", "Assistant"},
-                new Object[]{"Peter", "Chef"},
-                new Object[]{"Mary", "Conductor"},
-                new Object[]{"Alex", "Controller"},
-                new Object[]{"Ariel", "Decorator"},
-                new Object[]{"Greg", "Fixer"},
-        };
-    }
-
-    @Test(description = "Создание пользователя", dataProvider = "dataProvider")
+    @Test(description = "Создание пользователя", enabled = true)
     @CitrusTest
-    public void createUserTest(String name, String job) {
+    public void createUserTest() {
         this.context = citrus.getCitrusContext().createTestContext();
 
         $(http()
@@ -57,13 +42,13 @@ public class FirstDataProviderCreateUserTest extends TestNGCitrusSupport {
                 .response(HttpStatus.CREATED)
                 .message()
                 .type("application/json")
-                .body(new ObjectMappingPayloadBuilder(getResponseData(name,job), "objectMapper"))
+                .body(new ObjectMappingPayloadBuilder(getResponseData(name,job), "objectMapper")) //проверка json с json - полностью
                 .validate(json()
-                        .ignore("$.createdAt"))
+                        .ignore("$.createdAt"))          //валидация отдельных полей: игнорирование поля createdAt
                 .validate(jsonPath()
-                        .expression("$.name",name)
+                        .expression("$.name",name)   //валидация отдельных полей: проверяем совпадение полей
                         .expression("$.job",job))
-                .extract(fromBody()
+                .extract(fromBody()                          //извлечение значения полей из json в отдельные переменные
                         .expression("$.id","currendId")
                         .expression("$.createdAt","createdAt"))
         );
@@ -77,7 +62,6 @@ public class FirstDataProviderCreateUserTest extends TestNGCitrusSupport {
         createUserResponse.setJob(job);
         createUserResponse.setId("@isNumber()@"); //citrus validation matcher - проверка, что id есть number
         createUserResponse.setCreatedAt("unknown");
-//        createUserResponse.setCreatedAt("@ignore()@"); //citrus validation matcher - игнорируем поле
 
         return createUserResponse;
     }

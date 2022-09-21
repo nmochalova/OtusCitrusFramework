@@ -1,4 +1,4 @@
-package pojo;
+package lesson.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,10 +10,12 @@ import lombok.ToString;
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User {
-    @JsonProperty("data")
-    private DataJson data;
+public class Support {
+    @JsonProperty("url")
+    private String url;
 
-    @JsonProperty("support")
-    private Support support;
+    @JsonProperty("text")
+    private String text;
+
+
 }

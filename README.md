@@ -17,8 +17,10 @@
 
 [Документация по citrus framework v.3.2.1](https://citrusframework.org/citrus/reference/3.2.1/html/index.html#preface)
 
-[Учебный проект beginner](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Beginner_v3.2.1) 
+[Учебный проект beginner v.3.2.1](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Beginner_v3.2.1) 
 
-[Учебный проект extended](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Extended_v3.2.1)
+[Учебный проект extended v.3.2.1](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Extended_v3.2.1)
+
+[Учебный проект extended v.2.8.0] (https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Extended)
 
 [Конспект лекции](https://github.com/nmochalova/OtusCitrusFramework/blob/main/Doc/Конспект.docx)

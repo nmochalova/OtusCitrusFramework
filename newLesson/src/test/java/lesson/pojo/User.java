@@ -1,4 +1,4 @@
-package pojo;
+package lesson.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,17 +10,10 @@ import lombok.ToString;
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CreateUserResponse {
-    @JsonProperty("name")
-    private String name;
+public class User {
+    @JsonProperty("data")
+    private DataJson data;
 
-    @JsonProperty("job")
-    private String job;
-
-    @JsonProperty("id")
-    private String id;
-
-    @JsonProperty("createdAt")
-    private String createdAt;
+    @JsonProperty("support")
+    private Support support;
 }
-
