@@ -37,6 +37,18 @@
                         content-type="application/json"
                         timeout="15000"/>
 
+    <!--REST Client (Mock reqres)-->
+    <citrus-http:client id="restClient"
+                        request-url="${urlMock}"
+                        content-type="application/json"
+                        timeout="15000"/>
+
+    <!--REST Server (Mock reqres)-->
+    <citrus-http:server id="restServer"
+                        port="5555"
+                        auto-start="true"
+                        timeout="15000"/>
+
     <!--SOAP Client-->
     <citrus-ws:client id="soapClient"
                       request-url="${urlSOAP}"
