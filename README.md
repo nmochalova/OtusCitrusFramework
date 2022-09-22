@@ -19,20 +19,17 @@
 
 **TestMock** - тест с демонстрацией мокирования сервиса Reqres при вызове get-запроса и получения ответа от заглушки, вместо Reqres.
 
+
+## demoApiHelpers содержит следующие тесты:
+
+**TestHelperHTTP** - пример http-хелпера, который умеет обращаться отправлять запросы от имени своего http-клиента на некий endpoint и валидировать полученный ответ
+
 [Песочница для REST](https://reqres.in/)
 
 [Песочница для SOAP](https://www.dataaccess.com/)
 
 [Документация по citrus framework v.3.2.1](https://citrusframework.org/citrus/reference/3.2.1/html/index.html#preface)
 
-[Учебный проект beginner v.3.2.1](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Beginner_v3.2.1) 
-
-[Учебный проект extended v.3.2.1](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Extended_v3.2.1)
-
-[Учебный проект extended v.2.8.0](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Extended)
+[Учебный проект](https://github.com/reviol/QA-JAVA)
 
 [Конспект лекции](https://github.com/nmochalova/OtusCitrusFramework/blob/main/Doc/Конспект.docx)
-
-## demoApiHelpers содержит следующие тесты:
-
-**TestHelperHTTP** - пример http-хелпера, который умеет обращаться отправлять запросы от имени своего http-клиента на некий endpoint и валидировать полученный ответ
