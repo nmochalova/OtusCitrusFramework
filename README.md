@@ -1,9 +1,9 @@
 # OtusCitrusFramework
 **Содержание проекта:** 
-- конспект лекции Citrus Framework;
-- создание тестового проекта и запуск теста.
+- Проект **newLesson** содержит примеры тестов с использованием Citrus Framework v.3.2.1  
+- Проект **demoApiHelpers** содержит примеры API Helpers с использованием Citrus Framework v.2.8.0 
 
-## Проект содержит следующие тесты:
+## newLesson содержит следующие тесты:
 
 **FirstTestGetUser** - Простой request-response с использованием своего http-клиента для метода get и валидация ответа при помощи objectMapper
 
@@ -32,3 +32,7 @@
 [Учебный проект extended v.2.8.0](https://github.com/reviol/QA-JAVA/tree/main/lesson_Citrus_Extended)
 
 [Конспект лекции](https://github.com/nmochalova/OtusCitrusFramework/blob/main/Doc/Конспект.docx)
+
+## demoApiHelpers содержит следующие тесты:
+
+**TestHelperHTTP** - пример http-хелпера, который умеет обращаться отправлять запросы от имени своего http-клиента на некий endpoint и валидировать полученный ответ
