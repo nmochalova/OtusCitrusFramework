@@ -11,6 +11,7 @@ import pojo.http.Support;
 import pojo.http.User;
 
 //Framework Citrus v.2.8.0
+//HTTP Helper
 public class TestHelperHTTP extends TestNGCitrusTestRunner {
     private TestContext context;
 
