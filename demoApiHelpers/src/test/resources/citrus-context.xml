@@ -62,5 +62,17 @@
             id="wssHelperClient"
             url="${urlWSS}"
             timeout="30000"/>
+
+    <!--REST Client (Mock reqres)-->
+    <citrus-http:client id="restClientHelpersMock"
+                        request-url="${urlMock}"
+                        content-type="application/json"
+                        timeout="30000"/>
+
+    <!--REST Server (Mock reqres)-->
+    <citrus-http:server id="restHelperServer"
+                        port="5555"
+                        auto-start="true"
+                        timeout="30000"/>
     	
 </beans>
