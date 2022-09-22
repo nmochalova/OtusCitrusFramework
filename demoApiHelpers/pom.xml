@@ -69,7 +69,11 @@
       <version>2.3.2</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>com.consol.citrus</groupId>
+      <artifactId>citrus-websocket</artifactId>
+      <version>${citrus.version}</version>
+    </dependency>
   </dependencies>
   
   <build>

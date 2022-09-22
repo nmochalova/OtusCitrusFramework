@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 public class TestHelperSOAP extends TestNGCitrusTestRunner {
     public TestContext context;
 
-    @Test(description = "SOAP тест", enabled = true)
+    @Test(description = "SOAP helper", enabled = true)
     @CitrusTest
     public void getTestActions() {
         this.context = citrus.createTestContext();

@@ -15,7 +15,7 @@ import pojo.http.User;
 public class TestHelperHTTP extends TestNGCitrusTestRunner {
     private TestContext context;
 
-    @Test(description = "Mock-ируем reqres-сервис: получение информации о пользователе", enabled = true)
+    @Test(description = "HTTP Helper", enabled = true)
     @CitrusTest
     public void getTestAction(){
         this.context = citrus.createTestContext();
