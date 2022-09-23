@@ -3,17 +3,20 @@
 /newLesson/*.iws
 /newLesson/*.iml
 /newLesson/*.ipr
+/newLesson/Doc/~*
 
 /demoApiHelpers/target/
 /demoApiHelpers/.idea/
 /demoApiHelpers/*.iws
 /demoApiHelpers/*.iml
 /demoApiHelpers/*.ipr
+/demoApiHelpers/Doc/~*
 
 /HomeworkCitrus_3/target/
 /HomeworkCitrus_3/.idea/
 /HomeworkCitrus_3/*.iws
 /HomeworkCitrus_3/*.iml
 /HomeworkCitrus_3/*.ipr
+/HomeworkCitrus_3/Doc/~*
 
 
