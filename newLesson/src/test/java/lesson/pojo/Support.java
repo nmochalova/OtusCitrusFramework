@@ -16,6 +16,4 @@ public class Support {
 
     @JsonProperty("text")
     private String text;
-
-
 }

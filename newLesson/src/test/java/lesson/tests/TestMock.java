@@ -4,7 +4,6 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.context.TestContext;
 import com.consol.citrus.message.builder.ObjectMappingPayloadBuilder;
 import com.consol.citrus.testng.TestNGCitrusSupport;
-import lesson.pojo.CreateUserResponse;
 import lesson.pojo.DataJson;
 import lesson.pojo.Support;
 import lesson.pojo.User;
@@ -12,9 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.testng.annotations.Test;
 
 import static com.consol.citrus.actions.EchoAction.Builder.echo;
-import static com.consol.citrus.dsl.JsonPathSupport.jsonPath;
-import static com.consol.citrus.dsl.JsonSupport.json;
-import static com.consol.citrus.dsl.MessageSupport.MessageBodySupport.fromBody;
 import static com.consol.citrus.http.actions.HttpActionBuilder.http;
 /*
 Заглушка testServer инициализируется при старте теста и ждет нас на порту 5555. Все параллельрные теста на этот порт зафейлятся.
