@@ -31,6 +31,15 @@
         <property name="serializationInclusion" value="NON_NULL"/>
     </bean>
 
+    <!--SQL-Helper, Настройки БД Postgres-->
+    <bean id="sqlHelper" class="org.postgresql.ds.PGSimpleDataSource">
+        <property name="serverName" value="${db.server.name}"/>
+        <property name="portNumber" value="${db.server.port}"/>
+        <property name="databaseName" value="${db.name}"/>
+        <property name="user" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
+
     <!--REST Client-->
     <citrus-http:client id="restClientReqres"
                         request-url="${url}"
