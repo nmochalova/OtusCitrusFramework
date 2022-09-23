@@ -19,11 +19,12 @@
 **SOAPHelper** - soap-хелпер для проверки 20 долларов для сервиса NumberConversion 
 
 
+## Ресурсы:
 
 [Песочница для REST](https://reqres.in/)
 
 [Песочница для SOAP](https://www.dataaccess.com/)
 
-
+[Описание домашнего задания](https://github.com/nmochalova/OtusCitrusFramework/blob/main/HomeworkCitrus_3/Doc/Homework_3.docx)
 
 
